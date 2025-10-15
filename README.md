@@ -1,13 +1,6 @@
-# U-Net: Semantic segmentation with PyTorch
-<a href="#"><img src="https://img.shields.io/github/actions/workflow/status/milesial/PyTorch-UNet/main.yml?logo=github&style=for-the-badge" /></a>
-<a href="https://hub.docker.com/r/milesial/unet"><img src="https://img.shields.io/badge/docker%20image-available-blue?logo=Docker&style=for-the-badge" /></a>
-<a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-v1.13+-red.svg?logo=PyTorch&style=for-the-badge" /></a>
-<a href="#"><img src="https://img.shields.io/badge/python-v3.6+-blue.svg?logo=python&style=for-the-badge" /></a>
+# Projet Segmentation U-Net
 
-![input and output for a random image in the test dataset](https://i.imgur.com/GD8FcB7.png)
-
-
-Customized implementation of the [U-Net](https://arxiv.org/abs/1505.04597) in PyTorch for Kaggle's [Carvana Image Masking Challenge](https://www.kaggle.com/c/carvana-image-masking-challenge) from high definition images.
+README Original
 
 - [Quick start](#quick-start)
   - [Without Docker](#without-docker)
@@ -32,32 +25,6 @@ Customized implementation of the [U-Net](https://arxiv.org/abs/1505.04597) in Py
 3. Install dependencies
 ```bash
 pip install -r requirements.txt
-```
-
-4. Download the data and run training:
-```bash
-bash scripts/download_data.sh
-python train.py --amp
-```
-
-### With Docker
-
-1. [Install Docker 19.03 or later:](https://docs.docker.com/get-docker/)
-```bash
-curl https://get.docker.com | sh && sudo systemctl --now enable docker
-```
-2. [Install the NVIDIA container toolkit:](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
-```bash
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
-   && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
-   && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-sudo apt-get update
-sudo apt-get install -y nvidia-docker2
-sudo systemctl restart docker
-```
-3. [Download and run the image:](https://hub.docker.com/repository/docker/milesial/unet)
-```bash
-sudo docker run --rm --shm-size=8g --ulimit memlock=-1 --gpus all -it milesial/unet
 ```
 
 4. Download the data and run training:
